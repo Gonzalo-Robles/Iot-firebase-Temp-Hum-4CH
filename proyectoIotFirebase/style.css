@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: left;
+  }
+
+  .darkButton {
+    width: 100px;
+    height: 40px;
+    font-size: 10px;
+    outline: none;
+    border-radius: 10px;
+    border-color: #222;
+  }
+/* Estilos para el modo oscuro */
+body.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-mode .container {
+  border: 2px solid #fff;
+}
+
+.dark-mode .toggle-button {
+  background-color: #444;
+  color: #fff;
+}
+.darkButton{
+  width: 100px;
+  height: 40px;
+  font-size: 10px;
+  outline: none;
+  border-radius: 10px;
+  border-color: #222;
+}
+    .extras{
+        border:none;
+        max-width: 600px;
+        margin: 0;
+    }
+ 
+  
+  .dispositivos{
+     text-align: left;
+     font-size: 15px;
+  }
+  .toggle-button {
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+  }
+
+  .toggle-button.on {
+    background-color: rgb(59, 175, 59);
+    color: white;
+  }
+
+  .toggle-button.off {
+    background-color: rgba(211, 44, 39, 0.857);
+    color: white;
+  }
+
+  @media screen and (max-width: 600px) {
+    .toggle-button {
+      width: 80px;
+      height: 30px;
+      font-size: 14px;
+    }
+  }
+/****************** TECLA TOGGGLE ********************/
+  /* Estilos generales del switch */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    
+  }
+  
+  /* Estilo del checkbox (oculto) */
+  .switch input {
+    display: none;
+  }
+  
+  /* Estilo del fondo del switch en posición OFF */
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+  }
+  
+  /* Estilo del fondo del switch en posición ON */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  /* Cambio de color del fondo del switch cuando está en posición ON */
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  /* Cambio de posición del fondo del switch cuando está en posición ON */
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  /****************** TECLA TOGGGLE ********************/
+  a {
+    display: inline-block;
+    text-decoration: none; /* Opcional: para eliminar la decoración de subrayado del enlace */
+    margin: 0; /* Eliminar márgenes */
+    padding: 0; /* Eliminar relleno */
+  }
+
+  @media screen and (max-width: 767px) {
+    .container,
+    .containerTimer,
+    .containerVolver {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      text-align: center;
+    }
+  
+    .toggle-button {
+      width: 80px;
+      height: 30px;
+      font-size: 14px;
+    }
+  }
+  /* Estilos para dispositivos móviles */
+@media screen and (max-width: 767px) {
+  .extras{
+    border:none;
+    max-width: 400px;
+    margin: 0;
+  }
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  }
+  .containerTimer {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .containerVolver {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+  }
+  }
+  
+  /* Estilos para dispositivos de escritorio */
+  @media screen and (min-width: 768px) {
+    .containerVolver{
+        text-align: center;
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+      .container {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+      }
+      .containerTimer {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        text-align: center;
+      }
+      .containerVolver {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        text-align: center;
+      }
+  }
+ 

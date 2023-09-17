@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CultivApp GDR</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="termostato" href="termostato.html">
+  <link rel="timer" href="timer.html">
+</head>
+<body>
+  <br>
+    <div class="container">
+      <h2>Control de parametros</h2>
+    <div class="container">
+
+   <!-- <p class="dispositivos">calefaccion: <span id="led1"> </span>
+        <label class="switch">
+          <input type="checkbox"onclick="toggleRelay('calefaccion')">
+          <span class="slider"></span>
+        </label>
+   </p>-->
+
+  <p class="dispositivos"> <button id="calefaccionButton" class="toggle-button off" onclick="toggleRelayTermostato('calefaccion')">OFF</button> Calefaccion: <span id="led1">OFF</span> </p>
+
+  <p class="dispositivos"> <button class="toggle-button" onclick="toggleRelay('riego')">TOGGLE</button> Riego: <span id="led2">OFF</span> </p>
+  
+  <p class="dispositivos"> <button class="toggle-button" onclick="toggleRelay('ventilacion')">TOGGLE</button> Ventilacion: <span id="led3">OFF</span> </p>
+
+  <p class="dispositivos"> <button class="toggle-button" onclick="toggleRelay('luces')">TOGGLE</button> Luces: <span id="led4">OFF</span> </p>
+ 
+</div>  
+    <br>
+  
+    <div class="container"> 
+      <p ><img src="./image/humedad.png" height="30px" width="30px">Humedad:  <span id="humedad"></span> % </p>
+      <p> <img src="./image/termometro.png" height="30px" width="30px">Temperatura: <span id="temperatura"></span> °C</p>
+      <div>
+        <p> 
+          <a href="timer.html"> 
+            <img class="extras" src="./image/clock.svg" height="30px" width="30px"> 
+          </a>
+            <span>Temporizador  <input type="checkbox" id="timerCheckbox" > </span>
+              <br>
+              <span id="timeOnDisplay"> Hora encendido</span> <span>ON</span>
+              <span id="timeOffDisplay"> Hora apagado</span> <span>OFF</span>
+        </p>
+        <p>
+          
+          
+          <a href="termostato.html">
+  <img src="./image/termostato.jpeg" height="30px" width="30px">
+</a>
+<span>Termostato</span> <input type="checkbox" id="termostatoCheckbox">
+<br>
+<span>T Max: <span id="maxTempDisplay">" "</span>°C</span>
+<span>T Min: <span id="minTempDisplay">" "</span>°C</span>
+
+</label>
+          
+
+        </label>
+        </p>
+        <button class="darkButton" onclick="toggleDarkMode()"> Modo Oscuro</button>
+      </p>
+      </div> 
+      
+  <script src="main.js"></script>
+
+</body>
+</html>
+
+
+
+
